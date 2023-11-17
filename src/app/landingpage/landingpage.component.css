@@ -39,6 +39,25 @@
   text-decoration: none;
   color: white;
 }
+.about .cardcontainer{
+    display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "area1 area2 area3";
+}
+.about .cardcontainer .card1 {
+  grid-area: area1;
+}
+.about .cardcontainer .card2 {
+  grid-area: area2;
+}
+.about .cardcontainer .card3 {
+  grid-area: area3;
+}
+.about .cardcontainer.cardc{
+    width: 60%;
+}
 /*WHY*/
 .why {
   background-color: #15191f;
@@ -46,6 +65,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
 }
 .why .div1 {
@@ -53,6 +73,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 50%;
 }
 .why .cardcontainer {
   display: grid;
@@ -60,6 +81,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: "area1 area2 area3";
+  justify-items: center;
 }
 .why .cardcontainer .cardc {
   width: 80%;
@@ -81,12 +103,12 @@
     font-size: 1.2rem;
     padding: 10px;
 }
+
+
 /*PLANNING*/
 .plan {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start;
-    align-items: flex-start; */
 }
 .plan .plancardcontainer {
   display: grid;
@@ -124,18 +146,13 @@
   margin: 10px;
 }
 @media screen and (max-width: 600px) {
-  /* .plan {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
   .plan .plancardcontainer {
     display: grid;
     gap: 2rem;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
     grid-template-areas: "area1" "area2" "area3";
+    justify-items: center;
   }
   .plancardcontainer .cardc {
     width: 80%;
@@ -146,5 +163,6 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
     grid-template-areas: "area1" "area2" "area3";
+    gap:4.5rem;
   }
 }
