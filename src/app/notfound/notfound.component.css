@@ -1,0 +1,10 @@
+div{
+    display:flex;
+    /* justify-content:center;  */
+    height: 100vh;
+    width: 100vw;
+}
+div > img{
+    width: 100%;
+    /* height: 100%; */
+}

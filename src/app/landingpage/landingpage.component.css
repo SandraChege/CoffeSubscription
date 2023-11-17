@@ -1,0 +1,150 @@
+.home {
+  background-image: url("https://t4.ftcdn.net/jpg/05/70/74/27/360_F_570742725_obcWTRszyVryIXfLbYqYjl90XZwGMiPC.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.textcontent {
+  color: white;
+  position: absolute;
+  width: 50%;
+  margin: 100px;
+}
+.textcontent h1 {
+  font-size: 4rem;
+}
+.textcontent button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #0e8684;
+  /* border-color: #0E8684; */
+  outline: none;
+  border: none;
+}
+.textcontent button a {
+  text-decoration: none;
+  color: white;
+}
+/*WHY*/
+.why {
+  background-color: #15191f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+.why .div1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.why .cardcontainer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "area1 area2 area3";
+}
+.why .cardcontainer .cardc {
+  width: 80%;
+  margin-bottom: -50px;
+  background-color: #0e8684;
+  border-radius: 10px;
+}
+.why .cardcontainer .card1 {
+  grid-area: area1;
+}
+.why .cardcontainer .card2 {
+  grid-area: area2;
+}
+.why .cardcontainer .card3 {
+  grid-area: area3;
+}
+.why .cardcontainer .cardc svg{
+  text-align: center;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+/*PLANNING*/
+.plan {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start;
+    align-items: flex-start; */
+}
+.plan .plancardcontainer {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "area1 area2 area3";
+}
+.plancardcontainer .cardc {
+  width: 80%;
+}
+.plancardcontainer .card1 {
+  grid-area: area1;
+}
+.plancardcontainer .card2 {
+  grid-area: area2;
+}
+.plancardcontainer .card3 {
+  grid-area: area3;
+}
+.plancardcontainer .cardc h3 {
+  font-size: 3rem;
+  color: rgb(248, 211, 217);
+}
+.plancardcontainer .cardc h2 {
+  font-weight: 500;
+}
+.plan button {
+  background-color: #0e8684;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin: 10px;
+}
+@media screen and (max-width: 600px) {
+  /* .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+  .plan .plancardcontainer {
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "area1" "area2" "area3";
+  }
+  .plancardcontainer .cardc {
+    width: 80%;
+  }
+  .why .cardcontainer{
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: "area1" "area2" "area3";
+  }
+}
